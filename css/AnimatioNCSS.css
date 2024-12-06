@@ -1,0 +1,59 @@
+﻿.cracker-explosion .sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffffff, #ffcc00);
+    border-radius: 50%;
+    animation: sparkle 2s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 200, 100, 0.8);
+}
+
+
+.cracker-explosion .confetti {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: var(--confetti-color, #ff3366);
+    animation: confettiFall 3s linear infinite;
+    border-radius: 2px;
+}
+
+
+.cracker-explosion .star {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(45deg, #ff3366, #ffc107);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: rotateStar 4s linear infinite;
+}
+
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5) translateY(-30px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(0.5) translateY(-50px);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateStar {
+    0% {
+        transform: translate(-50px, -50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50px, 50px) rotate(360deg);
+        opacity: 0;
+    }
+}

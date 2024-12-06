@@ -1,0 +1,161 @@
+﻿.bg-gradient {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-bottom: 3px solid #ffc371;
+}
+
+
+.logo-img {
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .logo-img:hover {
+        transform: scale(1.1);
+    }
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+#navigation .nav-link {
+    position: relative;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+
+.custom-dropdown {
+    background: #ff7e5f;
+    border: none;
+    animation: fadeIn 0.3s ease;
+}
+
+    .custom-dropdown .dropdown-item {
+        color: #fff;
+        font-weight: 500;
+    }
+
+        .custom-dropdown .dropdown-item:hover {
+            background: #feb47b;
+        }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+   
+    padding: 15px 30px;
+}
+
+
+#navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+nav {
+
+    padding: 20px;
+  
+}
+
+
+#navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+    .nav-link:hover,
+    .selected .nav-link {
+        background-color: #e74c3c;
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #e74c3c;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    #navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 10px;
+        text-align: center;
+    }
+}
